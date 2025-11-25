@@ -203,32 +203,6 @@ The system analyzes gameplay states, predicts player behavior, and adjusts strat
 - Strategy optimization and state evaluation
 - High-performance architecture for live gameplay
 
-## Education
-
-**Breda University of Applied Sciences (BUas)**
-- Bachelor's Degree in Applied Data Science & Artificial Intelligence
-- September 2023 - Present
-- Breda, The Netherlands
-
-**Escuela Suiza de Barcelona**
-- Swiss Certificate Matura
-- Graduated: June 2023
-- Barcelona, Spain
-
-## Languages
-- Spanish (Native) & Catalan (Advanced)
-- German (Native)
-- English (C1 Level)
-- Dutch (Basic)
-- French (Basic)
-
-## What I'm Looking For
-I'm particularly interested in opportunities to work on:
-- Open-source AI tools and software development
-- Data-driven projects that combine ML, data handling, and user-centered design
-- Internships where I can apply analytical thinking and problem-solving to real-world challenges
-- Projects involving computer vision, NLP, or predictive analytics
-
 ## Connect with Me
 
 **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/noah-ivanisevic-94386a315/)
