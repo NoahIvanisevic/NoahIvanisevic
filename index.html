@@ -72,7 +72,6 @@
             66% { transform: translate(-80px, 100px) scale(0.9); }
         }
 
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -138,7 +137,6 @@
             width: 100%;
         }
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -255,7 +253,6 @@
             transform: translateY(-3px);
         }
 
-        /* Main Content */
         .content-wrapper {
             max-width: 1400px;
             margin: 0 auto;
@@ -283,7 +280,6 @@
             margin-bottom: 4rem;
         }
 
-        /* About Section */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -330,7 +326,6 @@
             font-weight: bold;
         }
 
-        /* Skills Section */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -370,7 +365,6 @@
             color: rgba(248, 250, 252, 0.8);
         }
 
-        /* Projects Section */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -383,6 +377,8 @@
             overflow: hidden;
             border: 1px solid rgba(99, 102, 241, 0.2);
             transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -393,6 +389,9 @@
 
         .project-content {
             padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card h3 {
@@ -411,17 +410,19 @@
             color: var(--primary);
         }
 
-        .project-card p {
+        .project-description {
             color: rgba(248, 250, 252, 0.7);
             margin-bottom: 1rem;
             line-height: 1.7;
+            flex-grow: 1;
         }
 
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-top: 1.5rem;
+            margin-top: auto;
+            padding-top: 1rem;
         }
 
         .tech-tag {
@@ -433,7 +434,49 @@
             font-weight: 500;
         }
 
-        /* Contact Section */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .cert-card {
+            background: var(--card-bg);
+            padding: 1.8rem;
+            border-radius: 15px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .cert-card h4 {
+            color: var(--light);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-card p {
+            color: rgba(248, 250, 252, 0.6);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .cert-card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .cert-card a:hover {
+            color: var(--accent);
+        }
+
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -472,7 +515,6 @@
             color: var(--primary);
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 3rem 8%;
@@ -494,7 +536,6 @@
             color: var(--accent);
         }
 
-        /* Responsive */
         @media (max-width: 1024px) {
             .about-content {
                 grid-template-columns: 1fr;
@@ -542,7 +583,8 @@
             }
 
             .projects-grid,
-            .skills-grid {
+            .skills-grid,
+            .certifications-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -558,6 +600,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -591,6 +634,12 @@
             <h2 class="section-title">Featured Projects</h2>
             <p class="section-subtitle">Some of my best work</p>
             <div id="projects-content"></div>
+        </section>
+
+        <section id="certifications">
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">My professional credentials</p>
+            <div id="certifications-content"></div>
         </section>
 
         <section id="contact">
@@ -632,6 +681,7 @@
             let aboutText = '';
             let skills = {};
             let projects = [];
+            let certifications = {};
             let contact = {};
             
             for (let i = 0; i < lines.length; i++) {
@@ -649,6 +699,9 @@
                 else if (line.includes('Technical Skills')) {
                     currentSection = 'skills';
                 }
+                else if (line.includes('## Certifications')) {
+                    currentSection = 'certifications';
+                }
                 else if (line.includes('Featured Projects')) {
                     currentSection = 'projects';
                 }
@@ -665,8 +718,27 @@
                     }
                     i--;
                 }
+                else if (currentSection === 'certifications' && line.startsWith('**') && line.endsWith('**')) {
+                    const category = line.replace(/\*\*/g, '');
+                    certifications[category] = [];
+                    i++;
+                    while (i < lines.length && !lines[i].startsWith('**') && !lines[i].startsWith('##')) {
+                        if (lines[i].startsWith('- [')) {
+                            const cert = { title: '', provider: '', link: '' };
+                            const match = lines[i].match(/- \[(.+?)\]\((.+?)\) - (.+)/);
+                            if (match) {
+                                cert.title = match[1];
+                                cert.link = match[2];
+                                cert.provider = match[3];
+                                certifications[category].push(cert);
+                            }
+                        }
+                        i++;
+                    }
+                    i--;
+                }
                 else if (currentSection === 'projects' && line.startsWith('###')) {
-                    const project = { title: '', description: '', techStack: '', link: '' };
+                    const project = { title: '', description: '', techStack: '', link: '', keyFeatures: [] };
                     const match = line.match(/\[(.+?)\]\((.+?)\)/);
                     if (match) {
                         project.title = match[1];
@@ -676,14 +748,27 @@
                     }
                     i++;
                     let desc = '';
-                    while (i < lines.length && !lines[i].startsWith('###') && !lines[i].startsWith('**Tech Stack:**') && !lines[i].startsWith('---')) {
-                        if (lines[i].trim()) desc += lines[i] + ' ';
+                    while (i < lines.length && !lines[i].startsWith('###') && !lines[i].startsWith('**Tech Stack:**') && !lines[i].startsWith('**Key Features:**') && !lines[i].startsWith('---')) {
+                        if (lines[i].trim() && !lines[i].startsWith('- ')) {
+                            desc += lines[i] + ' ';
+                        }
                         i++;
                     }
                     project.description = desc.trim();
+                    
                     if (lines[i] && lines[i].startsWith('**Tech Stack:**')) {
                         project.techStack = lines[i].replace('**Tech Stack:**', '').trim();
+                        i++;
                     }
+                    
+                    if (lines[i] && lines[i].startsWith('**Key Features:**')) {
+                        i++;
+                        while (i < lines.length && lines[i].startsWith('- ')) {
+                            project.keyFeatures.push(lines[i].substring(2));
+                            i++;
+                        }
+                    }
+                    
                     projects.push(project);
                 }
                 else if (currentSection === 'contact') {
@@ -705,6 +790,7 @@
             displayAbout(aboutText);
             displaySkills(skills);
             displayProjects(projects);
+            displayCertifications(certifications);
             displayContact(contact);
         }
 
@@ -753,7 +839,7 @@
             const projectsDiv = document.getElementById('projects-content');
             let html = '<div class="projects-grid">';
             
-            projects.slice(0, 6).forEach(project => {
+            projects.slice(0, 8).forEach(project => {
                 html += '<div class="project-card">';
                 html += '<div class="project-content">';
                 if (project.link) {
@@ -761,7 +847,10 @@
                 } else {
                     html += `<h3>${project.title}</h3>`;
                 }
-                html += `<p>${project.description.substring(0, 200)}...</p>`;
+                
+                const firstSentence = project.description.split('.')[0] + '.';
+                html += `<div class="project-description">${firstSentence}</div>`;
+                
                 if (project.techStack) {
                     html += '<div class="tech-stack">';
                     project.techStack.split(',').forEach(tech => {
@@ -774,6 +863,24 @@
             
             html += '</div>';
             projectsDiv.innerHTML = html;
+        }
+
+        function displayCertifications(certifications) {
+            const certsDiv = document.getElementById('certifications-content');
+            let html = '<div class="certifications-grid">';
+            
+            for (const [category, certs] of Object.entries(certifications)) {
+                certs.forEach(cert => {
+                    html += '<div class="cert-card">';
+                    html += `<h4>${cert.title}</h4>`;
+                    html += `<p>${cert.provider}</p>`;
+                    html += `<a href="${cert.link}" target="_blank">View Course →</a>`;
+                    html += '</div>';
+                });
+            }
+            
+            html += '</div>';
+            certsDiv.innerHTML = html;
         }
 
         function displayContact(contact) {
