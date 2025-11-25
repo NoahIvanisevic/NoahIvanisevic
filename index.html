@@ -633,12 +633,14 @@
             let skills = {};
             let projects = [];
             let contact = {};
+            let inSkillsSection = false;
             
             for (let i = 0; i < lines.length; i++) {
                 const line = lines[i];
                 
                 if (line.startsWith('## About Me')) {
                     currentSection = 'about';
+                    inSkillsSection = false;
                     i++;
                     while (i < lines.length && !lines[i].startsWith('##')) {
                         aboutText += lines[i] + '\n';
@@ -648,22 +650,27 @@
                 }
                 else if (line.includes('🛠️ Technical Skills')) {
                     currentSection = 'skills';
+                    inSkillsSection = true;
                 }
-                else if (line.includes('📜 Certifications')) {
-                    currentSection = 'certifications'; // Stop parsing skills when we hit certifications
+                else if (line.startsWith('##')) {
+                    // Any new section stops skills parsing
+                    if (currentSection === 'skills') {
+                        inSkillsSection = false;
+                    }
+                    if (line.includes('🚀 Featured Projects')) {
+                        currentSection = 'projects';
+                    }
+                    else if (line.includes('📫 Connect with Me')) {
+                        currentSection = 'contact';
+                    }
                 }
-                else if (line.includes('🚀 Featured Projects')) {
-                    currentSection = 'projects';
-                }
-                else if (line.includes('📫 Connect with Me')) {
-                    currentSection = 'contact';
-                }
-                else if (currentSection === 'skills' && line.startsWith('**') && line.endsWith('**') && !line.includes(':')) {
-                    const category = line.replace(/\*\*/g, '').trim();
+                else if (inSkillsSection && line.startsWith('**') && line.endsWith(':**')) {
+                    const category = line.replace(/\*\*/g, '').replace(':', '').trim();
                     skills[category] = [];
                     i++;
-                    while (i < lines.length && lines[i].startsWith('- ') && !lines[i].includes('http')) {
-                        skills[category].push(lines[i].substring(2));
+                    while (i < lines.length && lines[i].startsWith('- ') && !lines[i].includes('[View Certificate]')) {
+                        const skill = lines[i].substring(2).trim();
+                        if (skill) skills[category].push(skill);
                         i++;
                     }
                     i--;
