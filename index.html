@@ -627,76 +627,84 @@
         }
 
         function parseAndDisplayContent(markdown) {
-            const lines = markdown.split('\n');
-            let currentSection = '';
-            let aboutText = '';
-            let skills = {};
-            let projects = [];
-            let contact = {};
-            let inSkillsSection = false;
+            // Find the Technical Skills section specifically
+            const skillsStart = markdown.indexOf('## 🛠️ Technical Skills');
+            const skillsEnd = markdown.indexOf('## 📜 Certifications');
             
-            for (let i = 0; i < lines.length; i++) {
-                const line = lines[i];
+            let skills = {};
+            
+            if (skillsStart !== -1 && skillsEnd !== -1) {
+                const skillsSection = markdown.substring(skillsStart, skillsEnd);
+                const lines = skillsSection.split('\n');
                 
-                if (line.startsWith('## About Me')) {
-                    currentSection = 'about';
-                    inSkillsSection = false;
-                    i++;
-                    while (i < lines.length && !lines[i].startsWith('##')) {
-                        aboutText += lines[i] + '\n';
+                for (let i = 0; i < lines.length; i++) {
+                    const line = lines[i];
+                    // Only match lines that have the colon format: **Category:**
+                    if (line.trim().startsWith('**') && line.includes(':') && line.trim().endsWith('**')) {
+                        const category = line.replace(/\*\*/g, '').replace(':', '').trim();
+                        skills[category] = [];
                         i++;
-                    }
-                    i--;
-                }
-                else if (line.includes('🛠️ Technical Skills')) {
-                    currentSection = 'skills';
-                    inSkillsSection = true;
-                }
-                else if (line.startsWith('##')) {
-                    // Any new section stops skills parsing
-                    if (currentSection === 'skills') {
-                        inSkillsSection = false;
-                    }
-                    if (line.includes('🚀 Featured Projects')) {
-                        currentSection = 'projects';
-                    }
-                    else if (line.includes('📫 Connect with Me')) {
-                        currentSection = 'contact';
+                        // Get all bullet points until we hit another category or empty line
+                        while (i < lines.length && lines[i].trim().startsWith('- ')) {
+                            const skill = lines[i].substring(lines[i].indexOf('- ') + 2).trim();
+                            if (skill) skills[category].push(skill);
+                            i++;
+                        }
+                        i--;
                     }
                 }
-                else if (inSkillsSection && line.startsWith('**') && line.endsWith(':**')) {
-                    const category = line.replace(/\*\*/g, '').replace(':', '').trim();
-                    skills[category] = [];
-                    i++;
-                    while (i < lines.length && lines[i].startsWith('- ') && !lines[i].includes('[View Certificate]')) {
-                        const skill = lines[i].substring(2).trim();
-                        if (skill) skills[category].push(skill);
+            }
+            
+            // Parse About section
+            let aboutText = '';
+            const aboutStart = markdown.indexOf('## About Me');
+            const aboutEnd = markdown.indexOf('## 🛠️ Technical Skills');
+            if (aboutStart !== -1 && aboutEnd !== -1) {
+                aboutText = markdown.substring(aboutStart, aboutEnd);
+            }
+            
+            // Parse Projects section
+            let projects = [];
+            const projectsStart = markdown.indexOf('## 🚀 Featured Projects');
+            const projectsEnd = markdown.indexOf('## 🎓 Education');
+            if (projectsStart !== -1) {
+                const projectsSection = markdown.substring(projectsStart, projectsEnd !== -1 ? projectsEnd : markdown.length);
+                const lines = projectsSection.split('\n');
+                
+                for (let i = 0; i < lines.length; i++) {
+                    const line = lines[i];
+                    if (line.startsWith('###')) {
+                        const project = { title: '', description: '', techStack: '', link: '' };
+                        const match = line.match(/\[(.+?)\]\((.+?)\)/);
+                        if (match) {
+                            project.title = match[1];
+                            project.link = match[2];
+                        } else {
+                            project.title = line.replace('###', '').trim();
+                        }
                         i++;
+                        let desc = '';
+                        while (i < lines.length && !lines[i].startsWith('###') && !lines[i].startsWith('**Tech Stack:**') && !lines[i].startsWith('---')) {
+                            if (lines[i].trim()) desc += lines[i] + ' ';
+                            i++;
+                        }
+                        project.description = desc.trim();
+                        if (lines[i] && lines[i].startsWith('**Tech Stack:**')) {
+                            project.techStack = lines[i].replace('**Tech Stack:**', '').trim();
+                        }
+                        if (project.title) projects.push(project);
                     }
-                    i--;
                 }
-                else if (currentSection === 'projects' && line.startsWith('###')) {
-                    const project = { title: '', description: '', techStack: '', link: '' };
-                    const match = line.match(/\[(.+?)\]\((.+?)\)/);
-                    if (match) {
-                        project.title = match[1];
-                        project.link = match[2];
-                    } else {
-                        project.title = line.replace('###', '').trim();
-                    }
-                    i++;
-                    let desc = '';
-                    while (i < lines.length && !lines[i].startsWith('###') && !lines[i].startsWith('**Tech Stack:**') && !lines[i].startsWith('---')) {
-                        if (lines[i].trim()) desc += lines[i] + ' ';
-                        i++;
-                    }
-                    project.description = desc.trim();
-                    if (lines[i] && lines[i].startsWith('**Tech Stack:**')) {
-                        project.techStack = lines[i].replace('**Tech Stack:**', '').trim();
-                    }
-                    projects.push(project);
-                }
-                else if (currentSection === 'contact') {
+            }
+            
+            // Parse Contact section
+            let contact = {};
+            const contactStart = markdown.indexOf('## 📫 Connect with Me');
+            if (contactStart !== -1) {
+                const contactSection = markdown.substring(contactStart);
+                const lines = contactSection.split('\n');
+                
+                for (const line of lines) {
                     if (line.includes('LinkedIn:')) {
                         const match = line.match(/\[(.+?)\]\((.+?)\)/);
                         if (match) contact.linkedin = match[2];
@@ -711,6 +719,10 @@
                     }
                 }
             }
+            
+            console.log('Parsed Skills:', skills);
+            console.log('Parsed Projects:', projects);
+            console.log('Parsed Contact:', contact);
             
             displayAbout(aboutText);
             displaySkills(skills);

@@ -214,7 +214,7 @@ I'm particularly interested in opportunities to work on:
 - Internships where I can apply analytical thinking and problem-solving to real-world challenges
 - Projects involving computer vision, NLP, or predictive analytics
 
-## 📫 Connect with Me
+## Connect with Me
 
 **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/noah-ivanisevic-94386a315/)
 
