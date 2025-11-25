@@ -609,14 +609,20 @@
 
         async function loadReadme() {
             try {
+                console.log('Fetching README from GitHub...');
                 const response = await fetch(`https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_USERNAME}/readme`);
+                
+                console.log('Response status:', response.status);
                 
                 if (!response.ok) {
                     throw new Error(`README not found (Status: ${response.status})`);
                 }
 
                 const data = await response.json();
+                console.log('README data received, decoding...');
                 const readmeContent = atob(data.content);
+                console.log('README length:', readmeContent.length);
+                console.log('README preview:', readmeContent.substring(0, 300));
                 
                 parseAndDisplayContent(readmeContent);
 
@@ -845,7 +851,10 @@
 
         function showError() {
             document.getElementById('about-content').innerHTML = 
-                '<div class="error">Unable to load portfolio content. Please check that your README repository is set up correctly.</div>';
+                '<div class="error"><h3>Unable to load portfolio content</h3><p>Please check that your README repository is set up correctly at:<br><strong>https://github.com/' + GITHUB_USERNAME + '/' + GITHUB_USERNAME + '</strong></p></div>';
+            document.getElementById('skills-content').innerHTML = '';
+            document.getElementById('projects-content').innerHTML = '';
+            document.getElementById('contact-content').innerHTML = '';
         }
 
         window.addEventListener('DOMContentLoaded', loadReadme);
