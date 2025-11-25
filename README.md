@@ -76,7 +76,6 @@ I'm a Data Science & AI student at Breda University of Applied Sciences with a p
 
 ### [Stable Diffusion Image Generator](https://github.com/NoahIvanisevic/Stable-Diffusion)
 A fully custom text-to-image generation system built on top of the Stable Diffusion architecture. This project goes beyond simply using pre-trained models, it includes custom training pipelines, model fine-tuning, and experimentation with sampling strategies to optimize realism, prompt coherence, and render quality.
-
 I engineered a modular system for dataset preprocessing, latent-space manipulation, hyperparameter tuning, and inference optimization, resulting in a fast and highly controllable image-generation workflow. This project showcases deep knowledge of diffusion models, computer vision, and modern generative AI.
 
 **Tech Stack:** 
