@@ -74,7 +74,7 @@ I'm a Data Science & AI student at Breda University of Applied Sciences with a p
 
 ## 🚀 Featured Projects
 
-### [Stable Diffusion Image Generator](https://github.com/Tunobitafavorito/Stable-Diffusion)
+### [Stable Diffusion Image Generator](https://github.com/NoahIvanisevic/Stable-Diffusion)
 A fully custom text-to-image generation system built on top of the Stable Diffusion architecture. This project goes beyond simply using pre-trained models — it includes custom training pipelines, model fine-tuning, and experimentation with sampling strategies to optimize realism, prompt coherence, and render quality.
 
 I engineered a modular system for dataset preprocessing, latent-space manipulation, hyperparameter tuning, and inference optimization, resulting in a fast and highly controllable image-generation workflow. This project showcases deep knowledge of diffusion models, computer vision, and modern generative AI.
@@ -90,7 +90,7 @@ Python, Stable Diffusion, PyTorch, Deep Learning, Computer Vision
 
 ---
 
-### [AI Music Generation App](https://github.com/Tunobitafavorito/Music_generated_AI)
+### [AI Music Generation App](https://github.com/NoahIvanisevic/Music_generated_AI)
 A creative AI application that uses transformer-based models from Hugging Face to generate original music compositions from natural language prompts. Users can describe the mood, style, tempo, instruments, or full scenes, and the system dynamically generates music that aligns with the prompt.
 The app delivers an intuitive and interactive experience, enabling both non-musicians and professionals to prototype ideas quickly. I built integrated audio processing tools, metadata extraction, and an inference interface that abstracts away model complexity for end-users.
 
@@ -176,7 +176,7 @@ I built containerized inference pipelines, automated validation/testing systems,
 
 ---
 
-### [Supercell Global AI Game Hackathon](https://github.com/Tunobitafavorito/supercell-ai-hackathon)
+### [Supercell Global AI Game Hackathon](https://github.com/NoahIvanisevic/supercell-ai-hackathon)
 Participated in Supercell’s world-renowned AI game development hackathon, designing ML agents capable of strategic decision-making and real-time adaptability.
 The system analyzes gameplay states, predicts player behavior, and adjusts strategies dynamically. This experience highlights fast prototyping, teamwork under pressure, and applying reinforcement learning to interactive environments.
 
@@ -220,7 +220,7 @@ I'm particularly interested in opportunities to work on:
 
 **Email:** [noitaivanisevic49@gmail.com](mailto:noitaivanisevic49@gmail.com)
 
-**GitHub:** [github.com/NoahIvanisevic](https://github.com/Tunobitafavorito)
+**GitHub:** [github.com/NoahIvanisevic](https://github.com/NoahIvanisevic)
 
 ---
 
