@@ -72,6 +72,7 @@
             66% { transform: translate(-80px, 100px) scale(0.9); }
         }
 
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -137,6 +138,7 @@
             width: 100%;
         }
 
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -253,6 +255,7 @@
             transform: translateY(-3px);
         }
 
+        /* Main Content */
         .content-wrapper {
             max-width: 1400px;
             margin: 0 auto;
@@ -280,6 +283,7 @@
             margin-bottom: 4rem;
         }
 
+        /* About Section */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -326,6 +330,7 @@
             font-weight: bold;
         }
 
+        /* Skills Section */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -365,6 +370,7 @@
             color: rgba(248, 250, 252, 0.8);
         }
 
+        /* Projects Section */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -427,6 +433,7 @@
             font-weight: 500;
         }
 
+        /* Contact Section */
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -465,6 +472,7 @@
             color: var(--primary);
         }
 
+        /* Footer */
         footer {
             text-align: center;
             padding: 3rem 8%;
@@ -486,6 +494,7 @@
             color: var(--accent);
         }
 
+        /* Responsive */
         @media (max-width: 1024px) {
             .about-content {
                 grid-template-columns: 1fr;
@@ -640,17 +649,14 @@
                 else if (line.includes('Technical Skills')) {
                     currentSection = 'skills';
                 }
-                else if (line.includes('Certifications')) {
-                    currentSection = ''; // Stop parsing when we hit certifications
-                }
                 else if (line.includes('Featured Projects')) {
                     currentSection = 'projects';
                 }
                 else if (line.includes('Connect with Me')) {
                     currentSection = 'contact';
                 }
-                else if (currentSection === 'skills' && line.startsWith('**') && line.endsWith(':**')) {
-                    const category = line.replace(/\*\*/g, '').replace(':', '').trim();
+                else if (currentSection === 'skills' && line.startsWith('**') && line.endsWith('**')) {
+                    const category = line.replace(/\*\*/g, '').replace(':', '');
                     skills[category] = [];
                     i++;
                     while (i < lines.length && lines[i].startsWith('- ')) {
