@@ -627,97 +627,113 @@
         }
 
         function parseAndDisplayContent(markdown) {
-            // Find the Technical Skills section specifically
-            const skillsStart = markdown.indexOf('## 🛠️ Technical Skills');
-            const skillsEnd = markdown.indexOf('## 📜 Certifications');
+            console.log('Starting to parse README...');
+            console.log('First 500 chars:', markdown.substring(0, 500));
             
+            // Parse Skills - look for lines between Technical Skills and Certifications
             let skills = {};
+            const skillsRegex = /##[^#]*Technical Skills([\s\S]*?)##[^#]*Certifications/i;
+            const skillsMatch = markdown.match(skillsRegex);
             
-            if (skillsStart !== -1 && skillsEnd !== -1) {
-                const skillsSection = markdown.substring(skillsStart, skillsEnd);
+            if (skillsMatch) {
+                console.log('Found skills section');
+                const skillsSection = skillsMatch[1];
                 const lines = skillsSection.split('\n');
                 
-                for (let i = 0; i < lines.length; i++) {
-                    const line = lines[i];
-                    // Only match lines that have the colon format: **Category:**
-                    if (line.trim().startsWith('**') && line.includes(':') && line.trim().endsWith('**')) {
-                        const category = line.replace(/\*\*/g, '').replace(':', '').trim();
-                        skills[category] = [];
-                        i++;
-                        // Get all bullet points until we hit another category or empty line
-                        while (i < lines.length && lines[i].trim().startsWith('- ')) {
-                            const skill = lines[i].substring(lines[i].indexOf('- ') + 2).trim();
-                            if (skill) skills[category].push(skill);
-                            i++;
-                        }
-                        i--;
+                let currentCategory = null;
+                for (let line of lines) {
+                    line = line.trim();
+                    // Category headers: **Something:**
+                    if (line.startsWith('**') && line.includes(':')) {
+                        currentCategory = line.replace(/\*\*/g, '').replace(':', '').trim();
+                        skills[currentCategory] = [];
+                        console.log('Found category:', currentCategory);
+                    }
+                    // Skill items: - Something
+                    else if (line.startsWith('- ') && currentCategory) {
+                        const skill = line.substring(2).trim();
+                        skills[currentCategory].push(skill);
                     }
                 }
+            } else {
+                console.error('Could not find Technical Skills section');
             }
             
             // Parse About section
             let aboutText = '';
-            const aboutStart = markdown.indexOf('## About Me');
-            const aboutEnd = markdown.indexOf('## 🛠️ Technical Skills');
-            if (aboutStart !== -1 && aboutEnd !== -1) {
-                aboutText = markdown.substring(aboutStart, aboutEnd);
+            const aboutRegex = /##[^#]*About Me([\s\S]*?)##[^#]*Technical Skills/i;
+            const aboutMatch = markdown.match(aboutRegex);
+            if (aboutMatch) {
+                aboutText = aboutMatch[1];
+                console.log('Found about section');
             }
             
             // Parse Projects section
             let projects = [];
-            const projectsStart = markdown.indexOf('## 🚀 Featured Projects');
-            const projectsEnd = markdown.indexOf('## 🎓 Education');
-            if (projectsStart !== -1) {
-                const projectsSection = markdown.substring(projectsStart, projectsEnd !== -1 ? projectsEnd : markdown.length);
-                const lines = projectsSection.split('\n');
+            const projectsRegex = /##[^#]*Featured Projects([\s\S]*?)##[^#]*Education/i;
+            const projectsMatch = markdown.match(projectsRegex);
+            
+            if (projectsMatch) {
+                console.log('Found projects section');
+                const projectsSection = projectsMatch[1];
+                const projectBlocks = projectsSection.split('###').filter(b => b.trim());
                 
-                for (let i = 0; i < lines.length; i++) {
-                    const line = lines[i];
-                    if (line.startsWith('###')) {
-                        const project = { title: '', description: '', techStack: '', link: '' };
-                        const match = line.match(/\[(.+?)\]\((.+?)\)/);
-                        if (match) {
-                            project.title = match[1];
-                            project.link = match[2];
-                        } else {
-                            project.title = line.replace('###', '').trim();
-                        }
-                        i++;
-                        let desc = '';
-                        while (i < lines.length && !lines[i].startsWith('###') && !lines[i].startsWith('**Tech Stack:**') && !lines[i].startsWith('---')) {
-                            if (lines[i].trim()) desc += lines[i] + ' ';
-                            i++;
-                        }
-                        project.description = desc.trim();
-                        if (lines[i] && lines[i].startsWith('**Tech Stack:**')) {
+                for (let block of projectBlocks) {
+                    const lines = block.split('\n').map(l => l.trim()).filter(l => l);
+                    if (lines.length === 0) continue;
+                    
+                    const project = { title: '', description: '', techStack: '', link: '' };
+                    
+                    // First line is title (might have link)
+                    const titleLine = lines[0];
+                    const linkMatch = titleLine.match(/\[(.+?)\]\((.+?)\)/);
+                    if (linkMatch) {
+                        project.title = linkMatch[1];
+                        project.link = linkMatch[2];
+                    } else {
+                        project.title = titleLine;
+                    }
+                    
+                    // Find description and tech stack
+                    let desc = [];
+                    for (let i = 1; i < lines.length; i++) {
+                        if (lines[i].startsWith('**Tech Stack:**')) {
                             project.techStack = lines[i].replace('**Tech Stack:**', '').trim();
+                            break;
+                        } else if (lines[i].startsWith('**Key Features:**') || lines[i].startsWith('---')) {
+                            break;
+                        } else {
+                            desc.push(lines[i]);
                         }
-                        if (project.title) projects.push(project);
+                    }
+                    project.description = desc.join(' ');
+                    
+                    if (project.title) {
+                        projects.push(project);
+                        console.log('Added project:', project.title);
                     }
                 }
+            } else {
+                console.error('Could not find Featured Projects section');
             }
             
             // Parse Contact section
             let contact = {};
-            const contactStart = markdown.indexOf('## 📫 Connect with Me');
-            if (contactStart !== -1) {
-                const contactSection = markdown.substring(contactStart);
-                const lines = contactSection.split('\n');
+            const contactRegex = /##[^#]*Connect with Me([\s\S]*)/i;
+            const contactMatch = markdown.match(contactRegex);
+            
+            if (contactMatch) {
+                console.log('Found contact section');
+                const contactSection = contactMatch[1];
                 
-                for (const line of lines) {
-                    if (line.includes('LinkedIn:')) {
-                        const match = line.match(/\[(.+?)\]\((.+?)\)/);
-                        if (match) contact.linkedin = match[2];
-                    }
-                    else if (line.includes('Email:')) {
-                        const match = line.match(/\[(.+?)\]\((.+?)\)/);
-                        if (match) contact.email = match[1];
-                    }
-                    else if (line.includes('GitHub:')) {
-                        const match = line.match(/\[(.+?)\]\((.+?)\)/);
-                        if (match) contact.github = match[2];
-                    }
-                }
+                const linkedinMatch = contactSection.match(/LinkedIn.*?\[.*?\]\((.*?)\)/i);
+                if (linkedinMatch) contact.linkedin = linkedinMatch[1];
+                
+                const emailMatch = contactSection.match(/Email.*?\[(.*?)\]/i);
+                if (emailMatch) contact.email = emailMatch[1];
+                
+                const githubMatch = contactSection.match(/GitHub.*?\[.*?\]\((.*?)\)/i);
+                if (githubMatch) contact.github = githubMatch[1];
             }
             
             console.log('Parsed Skills:', skills);
