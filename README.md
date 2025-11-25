@@ -192,7 +192,7 @@ I built containerized inference pipelines, automated validation/testing systems,
 ---
 
 ### [Supercell Global AI Game Hackathon](https://github.com/NoahIvanisevic/supercell-ai-hackathon)
-Participated in Supercell’s world-renowned AI game development hackathon, designing ML agents capable of strategic decision-making and real-time adaptability.
+Participated in Supercells world-renowned AI game development hackathon, designing ML agents capable of strategic decision-making and real-time adaptability.
 The system analyzes gameplay states, predicts player behavior, and adjusts strategies dynamically. This experience highlights fast prototyping, teamwork under pressure, and applying reinforcement learning to interactive environments.
 
 **Tech Stack:** Python, Reinforcement Learning, Game AI, Machine Learning, Neural Networks
