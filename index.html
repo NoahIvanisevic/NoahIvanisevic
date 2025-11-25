@@ -366,9 +366,11 @@
         }
 
         .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 2.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .project-card {
