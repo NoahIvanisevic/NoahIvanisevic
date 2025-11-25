@@ -3,15 +3,15 @@
 ## About Me
 I'm a Data Science & AI student at Breda University of Applied Sciences with a passion for turning data into actionable insights. Growing up in an international family taught me adaptability, cross-cultural communication, and staying calm under pressure. Sports have been a key part of my life, teaching me teamwork, leadership, and dedication.
 
-- 🔭 I'm currently working on **AI/ML projects and computer vision pipelines**
-- 🌱 I'm currently learning **MLOps, Docker containerization, and advanced deep learning**
-- 👯 I'm looking to collaborate on **open-source AI tools and data science projects**
-- 💬 Ask me about **Python, Machine Learning, Data Visualization, and AI model deployment**
-- 📫 How to reach me: **noitaivanisevic49@gmail.com**
-- 🎯 Goal: Contribute to projects that connect data, AI, and human experience to make a positive impact
-- ⚡ Fun fact: **I speak 5 languages and love skiing, snowboarding, and mountain hiking!**
+- I'm currently working on **AI/ML projects and computer vision pipelines**
+- I'm currently learning **MLOps, Docker containerization, and advanced deep learning**
+- I'm looking to collaborate on **open-source AI tools and data science projects**
+- Ask me about **Python, Machine Learning, Data Visualization, and AI model deployment**
+- How to reach me: **noitaivanisevic49@gmail.com**
+- Goal: Contribute to projects that connect data, AI, and human experience to make a positive impact
+- Fun fact: **I speak 5 languages and love skiing, snowboarding, and mountain hiking!**
 
-## 🛠️ Technical Skills
+## Technical Skills
 
 **Programming & Data Science:**
 - Python (Pandas, NumPy, Scikit-learn, Keras)
@@ -42,7 +42,7 @@ I'm a Data Science & AI student at Breda University of Applied Sciences with a p
 - Microsoft 365
 - Adobe Tools
 
-## 📜 Certifications
+## Certifications
 
 **Data Science & Machine Learning**
 - [Supervised Learning with Scikit-learn](https://app.datacamp.com/learn/courses/supervised-learning-with-scikit-learn) - DataCamp
@@ -72,7 +72,7 @@ I'm a Data Science & AI student at Breda University of Applied Sciences with a p
 - [Design Thinking: Understanding the Process](https://www.linkedin.com/learning/interaction-design-interface/introducing-the-interface?u=36359204) - LinkedIn Learning
   - [View Certificate](certificates/Design_Thinking_Understanding_the_Process.pdf)
 
-## 🚀 Featured Projects
+## Featured Projects
 
 ### [Stable Diffusion Image Generator](https://github.com/NoahIvanisevic/Stable-Diffusion)
 A fully custom text-to-image generation system built on top of the Stable Diffusion architecture. This project goes beyond simply using pre-trained models — it includes custom training pipelines, model fine-tuning, and experimentation with sampling strategies to optimize realism, prompt coherence, and render quality.
@@ -188,7 +188,7 @@ The system analyzes gameplay states, predicts player behavior, and adjusts strat
 - Strategy optimization and state evaluation
 - High-performance architecture for live gameplay
 
-## 🎓 Education
+## Education
 
 **Breda University of Applied Sciences (BUas)**
 - Bachelor's Degree in Applied Data Science & Artificial Intelligence
@@ -200,14 +200,14 @@ The system analyzes gameplay states, predicts player behavior, and adjusts strat
 - Graduated: June 2023
 - Barcelona, Spain
 
-## 🌍 Languages
+## Languages
 - Spanish (Native) & Catalan (Advanced)
 - German (Native)
 - English (C1 Level)
 - Dutch (Basic)
 - French (Basic)
 
-## 💼 What I'm Looking For
+## What I'm Looking For
 I'm particularly interested in opportunities to work on:
 - Open-source AI tools and software development
 - Data-driven projects that combine ML, data handling, and user-centered design
@@ -221,7 +221,3 @@ I'm particularly interested in opportunities to work on:
 **Email:** [noitaivanisevic49@gmail.com](mailto:noitaivanisevic49@gmail.com)
 
 **GitHub:** [github.com/NoahIvanisevic](https://github.com/NoahIvanisevic)
-
----
-
-💡 *"Turning data into insights, one project at a time"*

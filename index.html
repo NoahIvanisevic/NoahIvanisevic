@@ -646,20 +646,23 @@
                     }
                     i--;
                 }
-                else if (line.includes('Technical Skills')) {
+                else if (line.includes('🛠️ Technical Skills')) {
                     currentSection = 'skills';
                 }
-                else if (line.includes('Featured Projects')) {
+                else if (line.includes('📜 Certifications')) {
+                    currentSection = 'certifications'; // Stop parsing skills when we hit certifications
+                }
+                else if (line.includes('🚀 Featured Projects')) {
                     currentSection = 'projects';
                 }
-                else if (line.includes('Connect with Me')) {
+                else if (line.includes('📫 Connect with Me')) {
                     currentSection = 'contact';
                 }
-                else if (currentSection === 'skills' && line.startsWith('**') && line.endsWith('**')) {
-                    const category = line.replace(/\*\*/g, '').replace(':', '');
+                else if (currentSection === 'skills' && line.startsWith('**') && line.endsWith('**') && !line.includes(':')) {
+                    const category = line.replace(/\*\*/g, '').trim();
                     skills[category] = [];
                     i++;
-                    while (i < lines.length && lines[i].startsWith('- ')) {
+                    while (i < lines.length && lines[i].startsWith('- ') && !lines[i].includes('http')) {
                         skills[category].push(lines[i].substring(2));
                         i++;
                     }
