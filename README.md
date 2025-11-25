@@ -13,34 +13,52 @@ I'm a Data Science & AI student at Breda University of Applied Sciences with a p
 
 ## Technical Skills
 
-**Programming & Data Science:**
-- Python (Pandas, NumPy, Scikit-learn, Keras)
+**Programming & Software Development**
+- Python (Pandas, NumPy, Scikit-learn, Keras, PyTorch)
 - SQL & PostgreSQL Database Design
 - R Programming
-- Machine Learning & Model Optimization
-- Time Series Forecasting & Predictive Analytics
+- C# (Basics)
+- HTML & CSS (Basics)
+- API Integration & RESTful API Development
+- Object-Oriented Programming (OOP)
 
-**AI & Computer Vision:**
-- AI Model Architecture
-- Computer Vision (Stable Diffusion, CV Pipelines)
+**Machine Learning & Artificial Intelligence**
+- Supervised & Unsupervised Learning
+- Time Series Forecasting & Predictive Analytics
+- Deep Learning (Neural Networks, CNNs, RNNs)
+- Mathematics for AI (Linear Algebra, Calculus, Probability, Statistics)
+- Model Optimization, Hyperparameter Tuning & Evaluation
 - Natural Language Processing (NLP)
 - Large Language Models (LLMs)
+- Responsible AI & Ethical AI Principles
+- Human-Centered AI Design
+- Computer Vision (Stable Diffusion, Image Segmentation, CV Pipelines)
 
-**Data Visualization & BI:**
-- Power BI (Dashboarding & User-Oriented Design)
-- Matplotlib & Data Visualization
+**Robotics & Reinforcement Learning**
+- Reinforcement Learning Algorithms (Q-Learning, Policy Gradients)
+- Robot Perception & Sensor Processing
+- Vision-Based Robotics
+- Robotics Control Systems (Basics)
 
-**DevOps & Cloud:**
-- Docker (Containerization & Deployment)
-- MLOps Principles (Model Testing, Packaging, Deployment)
-- Cloud Computing Fundamentals
+**Data Engineering & MLOps**
+- Data Engineering Workflows & ETL Pipelines
+- Database Modeling & Data Transformation
+- Docker & Containerization
+- MLOps (Model Packaging, Testing, Deployment, Monitoring)
+- Model Serving & Production Deployment
+- Version Control (Git & GitHub)
 
-**Tools & Platforms:**
-- Git & GitHub
+**Data Visualization & Business Intelligence**
+- Power BI (Dashboarding, User-Oriented Design)
+- Matplotlib, Seaborn & Data Storytelling
+- Exploratory Data Analysis (EDA)
+
+**Tools & Platforms**
 - Jupyter Notebooks
-- VS Code
-- Microsoft 365
-- Adobe Tools
+- VS Code & PyCharm
+- Adobe Creative Tools
+- Microsoft 365 Suite
+- Cloud Computing Fundamentals (Azure / AWS Basics)
 
 ## Certifications
 
