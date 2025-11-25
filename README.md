@@ -7,7 +7,7 @@ I'm a Data Science & AI student at Breda University of Applied Sciences with a p
 - I'm currently learning **MLOps, Docker containerization, and advanced deep learning**
 - I'm looking to collaborate on **open-source AI tools and data science projects**
 - Ask me about **Python, Machine Learning, Data Visualization, and AI model deployment**
-- How to reach me: **noitaivanisevic49@gmail.com**
+- How to reach me: **[noitaivanisevic49@gmail.com](mailto:noitaivanisevic49@gmail.com)**
 - Goal: Contribute to projects that connect data, AI, and human experience to make a positive impact
 - Fun fact: **I speak 5 languages and love skiing, snowboarding, and mountain hiking!**
 
