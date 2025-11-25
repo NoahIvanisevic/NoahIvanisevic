@@ -850,8 +850,9 @@
                     html += `<h3>${project.title}</h3>`;
                 }
                 
-                const firstSentence = project.description.split('.')[0] + '.';
-                html += `<div class="project-description">${firstSentence}</div>`;
+                const sentences = project.description.split('.').filter(s => s.trim());
+                const fourSentences = sentences.slice(0, 4).join('.') + '.';
+                html += `<div class="project-description">${fourSentences}</div>`;
                 
                 if (project.techStack) {
                     html += '<div class="tech-stack">';
