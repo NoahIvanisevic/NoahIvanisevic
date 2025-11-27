@@ -164,7 +164,7 @@ I implemented robust image preprocessing, segmentation algorithms, and feature e
 
 ### TV Show Emotion Detection for Continental Intelligence
 A large-scale NLP and LLM-based system designed to analyze emotional patterns in TV shows by processing transcripts, dialogues, and scene descriptions. The pipeline identifies emotional arcs, character sentiment, story pacing, and viewer engagement dynamics.
-This project demonstrates expert use of LLMs for classification, temporal tracking, and narrative analysis—unlocking insights for writers, producers, researchers, and entertainment marketers.
+This project demonstrates expert use of LLMs for classification, temporal tracking, and narrative analysis unlocking insights for writers, producers, researchers, and entertainment marketers.
 
 **Tech Stack:** Python, Large Language Models (LLMs), Natural Language Processing, Sentiment Analysis, Transformers
 
