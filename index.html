@@ -518,6 +518,61 @@
     .fi-row p { font-size: .88rem; color: var(--tm); line-height: 1.55; }
     .fi-row p strong { color: var(--t); font-weight: 600; }
 
+    /* ── EXPERIENCE ─────────────────────────────── */
+    .exp-card {
+      background: var(--surface);
+      border: 1px solid var(--bd);
+      border-radius: var(--rl);
+      padding: 2rem 2.2rem;
+      transition: border-color .25s, box-shadow .25s;
+    }
+    .exp-card:hover { border-color: var(--bdh); box-shadow: var(--shl); }
+
+    .exp-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .exp-role    { font-size: 1.15rem; font-weight: 700; color: var(--t); margin-bottom: .25rem; }
+    .exp-company { font-size: 1rem; font-weight: 600; color: var(--p); }
+    .exp-period  {
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--gr);
+      background: rgba(74,222,128,.1);
+      border: 1px solid rgba(74,222,128,.22);
+      border-radius: 9999px;
+      padding: .3rem .9rem;
+      white-space: nowrap;
+      align-self: flex-start;
+    }
+
+    .exp-desc {
+      font-size: .95rem;
+      color: var(--tm);
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+    .exp-desc strong { color: var(--t); font-weight: 600; }
+
+    .exp-resp {
+      display: flex;
+      flex-direction: column;
+      gap: .55rem;
+      margin-bottom: 1.5rem;
+    }
+    .exp-resp li {
+      font-size: .875rem;
+      color: var(--tm);
+      padding-left: 1.1rem;
+      position: relative;
+      line-height: 1.6;
+    }
+    .exp-resp li::before { content: '▹'; position: absolute; left: 0; color: var(--p); }
+
     /* ── SKILLS ─────────────────────────────────── */
     .skills-bg { background: var(--bg2); }
     .skills-grid {
@@ -754,6 +809,7 @@
     <div class="nav-logo">Noah Ivanisevic</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#certifications">Certifications</a></li>
@@ -769,6 +825,7 @@
 
   <div class="mob-nav" id="mobNav">
     <a href="#about">About</a>
+    <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#certifications">Certifications</a>
@@ -781,7 +838,7 @@
     <div class="hero-inner">
       <div class="hero-badge">
         <span class="dot"></span>
-        Available for opportunities
+        AI Flows Engineer Intern @ Cape.io
       </div>
       <h1>Hi, I'm <span class="grad">Noah<br>Ivanisevic</span></h1>
       <div class="hero-role">
@@ -878,6 +935,43 @@
           <div class="fi-row">
             <div class="fi-ico">⚡</div>
             <p>Fun fact: <strong>5 languages, loves skiing &amp; snowboarding, fuelled by Monster Energy ☕</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="skills-bg">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="section-label">Experience</div>
+        <h2 class="section-title">Where I've <span class="grad">worked</span></h2>
+      </div>
+      <div style="margin-top:3rem">
+        <div class="exp-card reveal d1">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">AI Flows Engineer Intern</div>
+              <div class="exp-company">Cape.io</div>
+            </div>
+            <div class="exp-period">Feb 2026 – Present</div>
+          </div>
+          <p class="exp-desc">
+            Embedded in the core development team at Cape.io, a marketing technology company, contributing to the design and implementation of <strong>AI Flows</strong> — a visual workflow builder that chains AI operations for creative production automation.
+          </p>
+          <ul class="exp-resp">
+            <li>Researched and benchmarked state-of-the-art AI models for image generation, background removal, inpainting, and image enhancement — evaluating quality, speed, and cost-effectiveness</li>
+            <li>Built and integrated flow nodes for creative operations including background removal, background generation, shadow and reflection effects, and format adaptation</li>
+            <li>Integrated third-party APIs and self-hosted AI models (Fal.ai and others) into the platform, handling authentication, rate limiting, and error recovery</li>
+            <li>Contributed to the visual flow builder interface, enabling non-technical users to design and manage AI workflows</li>
+            <li>Designed and documented MLOps architecture decisions, including containerized deployment, job queue systems (BullMQ + Redis), and run history snapshot mechanisms</li>
+            <li>Collaborated on improving system resilience — retry logic, dependency-aware failure handling, and crash recovery for long-running flows</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="tt">Python</span><span class="tt">TypeScript</span><span class="tt">Docker</span>
+            <span class="tt">Fal.ai</span><span class="tt">Node.js</span><span class="tt">BullMQ</span>
+            <span class="tt">Redis</span><span class="tt">REST APIs</span><span class="tt">Git</span>
           </div>
         </div>
       </div>

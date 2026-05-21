@@ -10,6 +10,28 @@ I'm a Data Science & AI student at Breda University of Applied Sciences with a p
 - Goal: Contribute to projects that connect data, AI, and human experience to make a positive impact
 - Fun fact: **I speak 5 languages and love skiing, snowboarding, and mountain hiking!**
 
+---
+
+## Experience
+
+### AI Flows Engineer Intern, Cape.io
+*February 2026 – Present*
+
+Embedded in the core development team at Cape.io, a marketing technology company, contributing to the design and implementation of **AI Flows**: a visual workflow builder that chains AI operations for creative production automation.
+
+**Responsibilities:**
+- Researched and benchmarked state-of-the-art AI models for image generation, background removal, inpainting, and image enhancement, evaluating quality, speed, and cost-effectiveness
+- Built and integrated flow nodes for creative operations including background removal, background generation, shadow and reflection effects, and format adaptation
+- Integrated third-party APIs and self-hosted AI models (Fal.ai and others) into the platform, handling authentication, rate limiting, and error recovery
+- Contributed to the visual flow builder interface, enabling non-technical users to design and manage AI workflows
+- Designed and documented MLOps architecture decisions, including containerized deployment, job queue systems (BullMQ + Redis), and run history snapshot mechanisms
+- Wrote technical tickets, bug reports, and comparative analyses used directly by the engineering team
+- Collaborated on improving system resilience, including retry logic, dependency-aware failure handling, and crash recovery for long-running flows
+
+**Tech Stack:** Python, TypeScript, Docker, Fal.ai, Node.js, BullMQ, Redis, REST APIs, Git
+
+---
+
 ## Technical Skills
 
 **Programming & Software Development**
@@ -59,6 +81,8 @@ I'm a Data Science & AI student at Breda University of Applied Sciences with a p
 - Microsoft 365 Suite
 - Cloud Computing Fundamentals (Azure / AWS Basics)
 
+---
+
 ## Certifications
 
 **Data Science & Machine Learning**
@@ -89,10 +113,12 @@ I'm a Data Science & AI student at Breda University of Applied Sciences with a p
 - [Design Thinking: Understanding the Process](https://www.linkedin.com/learning/interaction-design-interface/introducing-the-interface?u=36359204) - LinkedIn Learning
   - [View Certificate](certificates/Design_Thinking_Understanding_the_Process.pdf)
 
+---
+
 ## Featured Projects
 
 ### [Stable Diffusion Image Generator](https://github.com/NoahIvanisevic/Stable-Diffusion)
-A fully custom text-to-image generation system built on top of the Stable Diffusion architecture. This project goes beyond simply using pre-trained models, it includes custom training pipelines, model fine-tuning, and experimentation with sampling strategies to optimize realism, prompt coherence, and render quality.
+A fully custom text-to-image generation system built on top of the Stable Diffusion architecture. This project goes beyond simply using pre-trained models. It includes custom training pipelines, model fine-tuning, and experimentation with sampling strategies to optimize realism, prompt coherence, and render quality.
 I engineered a modular system for dataset preprocessing, latent-space manipulation, hyperparameter tuning, and inference optimization, resulting in a fast and highly controllable image-generation workflow. This project showcases deep knowledge of diffusion models, computer vision, and modern generative AI.
 
 **Tech Stack:** Python, Stable Diffusion, PyTorch, Deep Learning, Computer Vision
@@ -155,7 +181,7 @@ I implemented robust image preprocessing, segmentation algorithms, and feature e
 
 **Key Features:**
 - Automated imaging and preprocessing workflow
-- Accurate root segmentation using CV + ML techniques
+- Accurate root segmentation using CV and ML techniques
 - Extraction of morphological features and growth metrics
 - Statistical reporting and clear visual summaries
 - Integration with robotic hardware for continuous operation
@@ -164,13 +190,13 @@ I implemented robust image preprocessing, segmentation algorithms, and feature e
 
 ### TV Show Emotion Detection for Continental Intelligence
 A large-scale NLP and LLM-based system designed to analyze emotional patterns in TV shows by processing transcripts, dialogues, and scene descriptions. The pipeline identifies emotional arcs, character sentiment, story pacing, and viewer engagement dynamics.
-This project demonstrates expert use of LLMs for classification, temporal tracking, and narrative analysis unlocking insights for writers, producers, researchers, and entertainment marketers.
+This project demonstrates expert use of LLMs for classification, temporal tracking, and narrative analysis, unlocking insights for writers, producers, researchers, and entertainment marketers.
 
 **Tech Stack:** Python, Large Language Models (LLMs), Natural Language Processing, Sentiment Analysis, Transformers
 
 **Key Features:**
 - Emotion and sentiment classification using advanced LLMs
-- Time-based emotional arc mapping across episodes/seasons
+- Time-based emotional arc mapping across episodes and seasons
 - Character-level emotion profiles and trend analysis
 - Scalable pipeline for processing large catalogs of content
 - Visual dashboards revealing story patterns and emotional pacing
@@ -179,7 +205,7 @@ This project demonstrates expert use of LLMs for classification, temporal tracki
 
 ### Production LLM Deployment with Docker
 A production-grade LLM deployment architecture using Docker, MLOps workflows, and scalable infrastructure. This project showcases experience in taking machine learning systems from research notebooks to reliable production services.
-I built containerized inference pipelines, automated validation/testing systems, logging and monitoring tools, and CI/CD workflows ensuring stable model rollout. The result is a maintainable, version-controlled environment capable of serving LLMs under real-world load.
+I built containerized inference pipelines, automated validation and testing systems, logging and monitoring tools, and CI/CD workflows ensuring stable model rollout. The result is a maintainable, version-controlled environment capable of serving LLMs under real-world load.
 
 **Tech Stack:** Docker, Python, MLOps, Kubernetes, Model Serving, CI/CD
 
@@ -192,7 +218,7 @@ I built containerized inference pipelines, automated validation/testing systems,
 ---
 
 ### [Supercell Global AI Game Hackathon](https://github.com/NoahIvanisevic/supercell-ai-hackathon)
-Participated in Supercells world-renowned AI game development hackathon, designing ML agents capable of strategic decision-making and real-time adaptability.
+Participated in Supercell's world-renowned AI game development hackathon, designing ML agents capable of strategic decision-making and real-time adaptability.
 The system analyzes gameplay states, predicts player behavior, and adjusts strategies dynamically. This experience highlights fast prototyping, teamwork under pressure, and applying reinforcement learning to interactive environments.
 
 **Tech Stack:** Python, Reinforcement Learning, Game AI, Machine Learning, Neural Networks
@@ -202,6 +228,8 @@ The system analyzes gameplay states, predicts player behavior, and adjusts strat
 - Adaptive learning based on player actions
 - Strategy optimization and state evaluation
 - High-performance architecture for live gameplay
+
+---
 
 ## Connect with Me
 
