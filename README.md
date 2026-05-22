@@ -15,7 +15,7 @@ I'm a Data Science & AI student at Breda University of Applied Sciences with a p
 ## Experience
 
 ### AI Flows Engineer Intern, Cape.io
-*February 2026 – Present*
+*February 2026 – July 2026*
 
 Embedded in the core development team at Cape.io, a marketing technology company, contributing to the design and implementation of **AI Flows**: a visual workflow builder that chains AI operations for creative production automation.
 
