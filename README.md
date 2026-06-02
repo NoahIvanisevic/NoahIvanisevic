@@ -1,240 +1,165 @@
-# Hi there, I'm Noah Ivanisevic 👋
+# Hi, I'm Noah Ivanisevic 👋
+
+**Data Science & AI student** at Breda University of Applied Sciences · **AI Flows Engineer Intern @ Cape.io**
+
+I turn messy data into decisions and research into production systems — across machine learning, computer vision, and MLOps. Loud in meetings, calm in a crisis.
+
+🌐 **[Interactive portfolio →](https://noahivanisevic.github.io/NoahIvanisevic/)** &nbsp;·&nbsp; 💼 [LinkedIn](https://www.linkedin.com/in/noah-ivanisevic-94386a315/) &nbsp;·&nbsp; 📧 [noitaivanisevic49@gmail.com](mailto:noitaivanisevic49@gmail.com) &nbsp;·&nbsp; 📍 Breda, Netherlands
+
+---
 
 ## About Me
-I'm a Data Science & AI student at Breda University of Applied Sciences with a passion for turning data into actionable insights. Growing up in an international family taught me adaptability, cross-cultural communication, and staying calm under pressure. Sports have been a key part of my life, teaching me teamwork, leadership, and dedication.
 
-- I'm currently working on **AI/ML projects and computer vision pipelines**
-- I'm currently learning **MLOps, Docker containerization, and advanced deep learning**
-- I'm looking to collaborate on **open-source AI tools and data science projects**
-- Ask me about **Python, Machine Learning, Data Visualization, and AI model deployment**
-- Goal: Contribute to projects that connect data, AI, and human experience to make a positive impact
-- Fun fact: **I speak 5 languages and love skiing, snowboarding, and mountain hiking!**
+I'm a Data Science & AI student with a real soft spot for turning data into insights people can actually use. Growing up in an international family taught me adaptability, cross-cultural communication, and how to stay calm under pressure. Sports did the rest — teamwork, leadership, and dedication.
 
----
-
-## Experience
-
-### AI Flows Engineer Intern, Cape.io
-*February 2026 – July 2026*
-
-Embedded in the core development team at Cape.io, a marketing technology company, contributing to the design and implementation of **AI Flows**: a visual workflow builder that chains AI operations for creative production automation.
-
-**Responsibilities:**
-- Researched and benchmarked state-of-the-art AI models for image generation, background removal, inpainting, and image enhancement, evaluating quality, speed, and cost-effectiveness
-- Built and integrated flow nodes for creative operations including background removal, background generation, shadow and reflection effects, and format adaptation
-- Integrated third-party APIs and self-hosted AI models (Fal.ai and others) into the platform, handling authentication, rate limiting, and error recovery
-- Contributed to the visual flow builder interface, enabling non-technical users to design and manage AI workflows
-- Designed and documented MLOps architecture decisions, including containerized deployment, job queue systems (BullMQ + Redis), and run history snapshot mechanisms
-- Wrote technical tickets, bug reports, and comparative analyses used directly by the engineering team
-- Collaborated on improving system resilience, including retry logic, dependency-aware failure handling, and crash recovery for long-running flows
-
-**Tech Stack:** Python, TypeScript, Docker, Fal.ai, Node.js, BullMQ, Redis, REST APIs, Git
+- 🔭 Currently working on **AI/ML projects and computer-vision pipelines**
+- 🌱 Currently learning **MLOps, Docker containerization, and advanced deep learning**
+- 🧪 Currently building an **AI-based scoring system to help reduce bias in hiring**
+- 👯 Looking to collaborate on **open-source AI tools and data-science projects**
+- 💬 Ask me about **Python, Machine Learning, Data Visualization, and AI model deployment**
+- 🎯 Goal: contribute to projects that connect data, AI, and human experience to make a positive impact
+- ⚡ Fun fact: I speak **five languages** and I'm happiest on a mountain — skiing, snowboarding, or hiking
 
 ---
 
-## Technical Skills
+## 🧠 How I'm Wired — pymetrics profile
 
-**Programming & Software Development**
-- Python (Pandas, NumPy, Scikit-learn, Keras, PyTorch)
-- SQL & PostgreSQL Database Design
-- R Programming
-- C# (Basics)
-- HTML & CSS (Basics)
-- API Integration & RESTful API Development
-- Object-Oriented Programming (OOP)
+I played the [pymetrics](https://www.pymetrics.ai/) behavioural games (Nov 2025) — the neuroscience-based assessments companies use in hiring. My three **most unique** traits:
 
-**Machine Learning & Artificial Intelligence**
-- Supervised & Unsupervised Learning
-- Time Series Forecasting & Predictive Analytics
-- Deep Learning (Neural Networks, CNNs, RNNs)
-- Mathematics for AI (Linear Algebra, Calculus, Probability, Statistics)
-- Model Optimization, Hyperparameter Tuning & Evaluation
-- Natural Language Processing (NLP)
-- Large Language Models (LLMs)
-- Responsible AI & Ethical AI Principles
-- Human-Centered AI Design
-- Computer Vision (Stable Diffusion, Image Segmentation, CV Pipelines)
+| Trait | What it means |
+|---|---|
+| **Attention** | Unflappable under mistakes; quick to react and comfortable juggling parallel tasks |
+| **Emotion** | Reads how people feel through context, not just facial cues |
+| **Numerical agility** | Careful, measured approach to numerical and logical problems |
 
-**Robotics & Reinforcement Learning**
-- Reinforcement Learning Algorithms (Q-Learning, Policy Gradients)
-- Robot Perception & Sensor Processing
-- Vision-Based Robotics
-- Robotics Control Systems (Basics)
+The short version: **fast-moving and risk-comfortable in the moment, but careful and precise when reasoning through problems.** Full breakdown lives on my [portfolio](https://noahivanisevic.github.io/NoahIvanisevic/#personality).
+
+---
+
+## 💼 Experience
+
+### AI Flows Engineer Intern — Cape.io
+*Feb 2026 – Jul 2026 · Marketing Technology*
+
+Embedded in the core development team, contributing to the design and implementation of **AI Flows** — a visual workflow builder that chains AI operations for creative production automation.
+
+- Researched and benchmarked state-of-the-art AI models for image generation, background removal, inpainting, and enhancement — weighing quality, speed, and cost
+- Built and integrated flow nodes for background removal/generation, shadow & reflection effects, and format adaptation
+- Integrated third-party and self-hosted models (Fal.ai and others), handling auth, rate limiting, and error recovery
+- Designed and documented MLOps architecture — containerized deployment, BullMQ + Redis job queues, and run-history snapshots
+- Hardened system resilience with retry logic, dependency-aware failure handling, and crash recovery for long-running flows
+
+**Tech:** Python · TypeScript · Docker · Fal.ai · Node.js · BullMQ · Redis · REST APIs · Git
+
+---
+
+## 🛠️ Technical Skills
+
+**Languages & Programming**
+`Python` · `SQL` · `PostgreSQL` · `R` · `C# (basics)` · `HTML & CSS`
+
+**ML & AI**
+Supervised & unsupervised learning · Deep learning (CNNs, RNNs) · Time-series forecasting · NLP · LLMs · Computer vision (Stable Diffusion, CV pipelines) · Model optimization · Responsible AI
 
 **Data Engineering & MLOps**
-- Data Engineering Workflows & ETL Pipelines
-- Database Modeling & Data Transformation
-- Docker & Containerization
-- MLOps (Model Packaging, Testing, Deployment, Monitoring)
-- Model Serving & Production Deployment
-- Version Control (Git & GitHub)
+ETL pipelines · Docker & containerization · Model packaging, testing, deployment & monitoring · CI/CD · Database modeling
 
-**Data Visualization & Business Intelligence**
-- Power BI (Dashboarding, User-Oriented Design)
-- Matplotlib, Seaborn & Data Storytelling
-- Exploratory Data Analysis (EDA)
+**Data Viz & BI**
+Power BI · Matplotlib · Seaborn · EDA · Data storytelling · User-oriented dashboard design
 
-**Tools & Platforms**
-- Jupyter Notebooks
-- VS Code & PyCharm
-- Adobe Creative Tools
-- Microsoft 365 Suite
-- Cloud Computing Fundamentals (Azure / AWS Basics)
+**Tools**
+Jupyter · VS Code · PyCharm · RStudio · Adobe Creative · Microsoft 365 · Azure / AWS fundamentals
+
+**Libraries**
+`pandas` · `NumPy` · `scikit-learn` · `Keras` · `PyTorch`
 
 ---
 
-## Certifications
-
-**Data Science & Machine Learning**
-- [Supervised Learning with Scikit-learn](https://app.datacamp.com/learn/courses/supervised-learning-with-scikit-learn) - DataCamp
-  - [View Certificate](certificates/Supervised_Learning_with_Scikit-learn.pdf)
-- [Machine Learning for Time Series Data in Python](https://app.datacamp.com/learn/courses/machine-learning-for-time-series-data-in-python) - DataCamp
-  - [View Certificate](certificates/Machine_Learning_for_Time_Series_Data_in_Python.pdf)
-- [Dimensionality Reduction in Python](https://app.datacamp.com/learn/courses/dimensionality-reduction-in-python) - DataCamp
-  - [View Certificate](certificates/Dimensionality_Reduction_in_Python.pdf)
-- [Understanding Machine Learning](https://app.datacamp.com/learn/courses/understanding-machine-learning) - DataCamp
-  - [View Certificate](certificates/Understanding_Machine_Learning.pdf)
-
-**Data Analysis & Visualization**
-- [Data Manipulation with Pandas](https://app.datacamp.com/learn/courses/data-manipulation-with-pandas) - DataCamp
-  - [View Certificate](certificates/DataManipulation_with_Pandas.pdf)
-- [Data Visualization in Power BI](https://app.datacamp.com/learn/courses/data-visualization-in-power-bi) - DataCamp
-  - [View Certificate](certificates/Data_Visualization_in_Power_BI.pdf)
-- [User-Oriented Design in Power BI](https://app.datacamp.com/learn/courses/user-oriented-design-in-power-bi-old-archived) - DataCamp
-  - [View Certificate](certificates/User-Oriented_Design_in_Power_BI.pdf)
-
-**Data Engineering & Cloud**
-- [Creating PostgreSQL Databases](https://app.datacamp.com/learn/courses/creating-postgresql-databases) - DataCamp
-  - [View Certificate](certificates/Creating_PostgreSQL_Databases.pdf)
-- [Understanding Cloud Computing](https://app.datacamp.com/learn/courses/understanding-cloud-computing) - DataCamp
-  - [View Certificate](certificates/Understanding_Cloud_Computing.pdf)
-
-**Professional Skills**
-- [Design Thinking: Understanding the Process](https://www.linkedin.com/learning/interaction-design-interface/introducing-the-interface?u=36359204) - LinkedIn Learning
-  - [View Certificate](certificates/Design_Thinking_Understanding_the_Process.pdf)
-
----
-
-## Featured Projects
+## 🚀 Featured Projects
 
 ### [Stable Diffusion Image Generator](https://github.com/NoahIvanisevic/Stable-Diffusion)
-A fully custom text-to-image generation system built on top of the Stable Diffusion architecture. This project goes beyond simply using pre-trained models. It includes custom training pipelines, model fine-tuning, and experimentation with sampling strategies to optimize realism, prompt coherence, and render quality.
-I engineered a modular system for dataset preprocessing, latent-space manipulation, hyperparameter tuning, and inference optimization, resulting in a fast and highly controllable image-generation workflow. This project showcases deep knowledge of diffusion models, computer vision, and modern generative AI.
-
-**Tech Stack:** Python, Stable Diffusion, PyTorch, Deep Learning, Computer Vision
-
-**Key Features:**
-- Advanced text-to-image generation with contextual prompt understanding
-- Fine-tuning pipeline for domain-specific training
-- Experimentation with diffusion parameters, schedulers, and samplers
-- Optimized inference for reduced generation time
-
----
+Custom text-to-image system on the Stable Diffusion architecture — training pipelines, fine-tuning, and sampling experiments for realism and prompt coherence, with optimized inference.
+**Tech:** Python · PyTorch · Stable Diffusion · Computer Vision
 
 ### [AI Music Generation App](https://github.com/NoahIvanisevic/Music_generated_AI)
-A creative AI application that uses transformer-based models from Hugging Face to generate original music compositions from natural language prompts. Users can describe the mood, style, tempo, instruments, or full scenes, and the system dynamically generates music that aligns with the prompt.
-The app delivers an intuitive and interactive experience, enabling both non-musicians and professionals to prototype ideas quickly. I built integrated audio processing tools, metadata extraction, and an inference interface that abstracts away model complexity for end-users.
-
-**Tech Stack:** Python, Hugging Face API, Transformers, Audio Processing
-
-**Key Features:**
-- Text-driven music generation with genre, mood, and tempo controls
-- Integration with state-of-the-art audio generation models
-- Smooth user workflow with automated audio processing and playback
-- Easily extendable architecture for additional sound models
-
----
-
-### NAC Breda Match Prediction Model
-A comprehensive sports analytics system designed to forecast match outcomes for NAC Breda using historical data and multilayered statistical features. The project integrates player attributes, team-level statistics, opponent history, formations, injuries, and environmental factors such as weather conditions.
-I implemented multiple machine learning algorithms, built a robust feature-engineering pipeline, and designed evaluation strategies (AUC, precision, calibration curves) to ensure accurate and trustworthy predictions. The system tracks performance across time, enabling iterative model refinement.
-
-**Tech Stack:** Python, Scikit-learn, Pandas, NumPy, Time Series Analysis, Statistical Modeling
-
-**Key Features:**
-- Advanced feature engineering from structured and time-series datasets
-- Multiple ML models (Random Forest, Gradient Boosting, ANN)
-- Cross-validation, hyperparameter tuning, and benchmark comparisons
-- Prediction accuracy tracking and continuous optimization
-
----
-
-### RiskAware for ANWB
-A geospatial risk assessment and visualization tool developed for ANWB to identify traffic accident hotspots across the Netherlands. The system ingests large datasets including accident history, road conditions, weather patterns, and traffic flow to compute a risk score for each location.
-I created a complete GIS processing pipeline, enabling interactive map visualizations and predictive modeling that helps ANWB improve road safety recommendations, emergency planning, and member services.
-
-**Tech Stack:** Python, GIS Libraries, Pandas, Geospatial Analysis, Data Visualization, Risk Modeling, SQL
-
-**Key Features:**
-- High-resolution geospatial analysis and spatial clustering
-- Custom risk scoring algorithm combining multivariate data sources
-- Interactive heatmaps and layered GIS visualizations
-- Predictive modeling for accident likelihood and severity
-
----
-
-### Automated Plant Root Analysis (NPEC.nl)
-An end-to-end computer vision and robotics pipeline automating root system measurement for research laboratories. This system replaces slow manual analysis with automated imaging, segmentation, and morphological quantification of plant roots.
-I implemented robust image preprocessing, segmentation algorithms, and feature extraction methods to measure key biological traits like length, branching complexity, and thickness distribution. Integrated with robotic imaging systems, the solution dramatically improves accuracy, repeatability, and throughput for plant scientists.
-
-**Tech Stack:** Python, OpenCV, Computer Vision, Image Segmentation, Robotics, Machine Learning
-
-**Key Features:**
-- Automated imaging and preprocessing workflow
-- Accurate root segmentation using CV and ML techniques
-- Extraction of morphological features and growth metrics
-- Statistical reporting and clear visual summaries
-- Integration with robotic hardware for continuous operation
-
----
-
-### TV Show Emotion Detection for Continental Intelligence
-A large-scale NLP and LLM-based system designed to analyze emotional patterns in TV shows by processing transcripts, dialogues, and scene descriptions. The pipeline identifies emotional arcs, character sentiment, story pacing, and viewer engagement dynamics.
-This project demonstrates expert use of LLMs for classification, temporal tracking, and narrative analysis, unlocking insights for writers, producers, researchers, and entertainment marketers.
-
-**Tech Stack:** Python, Large Language Models (LLMs), Natural Language Processing, Sentiment Analysis, Transformers
-
-**Key Features:**
-- Emotion and sentiment classification using advanced LLMs
-- Time-based emotional arc mapping across episodes and seasons
-- Character-level emotion profiles and trend analysis
-- Scalable pipeline for processing large catalogs of content
-- Visual dashboards revealing story patterns and emotional pacing
-
----
-
-### Production LLM Deployment with Docker
-A production-grade LLM deployment architecture using Docker, MLOps workflows, and scalable infrastructure. This project showcases experience in taking machine learning systems from research notebooks to reliable production services.
-I built containerized inference pipelines, automated validation and testing systems, logging and monitoring tools, and CI/CD workflows ensuring stable model rollout. The result is a maintainable, version-controlled environment capable of serving LLMs under real-world load.
-
-**Tech Stack:** Docker, Python, MLOps, Kubernetes, Model Serving, CI/CD
-
-**Key Features:**
-- Fully containerized and reproducible deployments
-- Model packaging, versioning, and auto-build pipelines
-- Monitoring and logging for performance and reliability
-- Horizontal scaling for high-demand environments
-
----
+Generates original music from natural-language prompts using transformer models from Hugging Face — mood, style, tempo, and instruments all controlled by text.
+**Tech:** Python · Hugging Face · Transformers · Audio Processing
 
 ### [Supercell Global AI Game Hackathon](https://github.com/NoahIvanisevic/supercell-ai-hackathon)
-Participated in Supercell's world-renowned AI game development hackathon, designing ML agents capable of strategic decision-making and real-time adaptability.
-The system analyzes gameplay states, predicts player behavior, and adjusts strategies dynamically. This experience highlights fast prototyping, teamwork under pressure, and applying reinforcement learning to interactive environments.
+ML agents for Supercell's AI game hackathon — strategic decision-making and real-time adaptability, predicting player behaviour and adjusting strategy on the fly.
+**Tech:** Python · Reinforcement Learning · Game AI · Neural Networks
 
-**Tech Stack:** Python, Reinforcement Learning, Game AI, Machine Learning, Neural Networks
+### RiskAware — ANWB
+Geospatial risk-assessment tool identifying traffic-accident hotspots across the Netherlands, with a custom multi-variate risk-scoring model and interactive heatmaps.
+**Tech:** Python · GIS · SQL · Geospatial Analysis · Risk Modelling
 
-**Key Features:**
-- Real-time intelligent agent behavior
-- Adaptive learning based on player actions
-- Strategy optimization and state evaluation
-- High-performance architecture for live gameplay
+### NAC Breda Match Prediction Model
+Sports-analytics system forecasting match outcomes from player attributes, team stats, formations, injuries, and weather — using Random Forest, Gradient Boosting, and ANN models.
+**Tech:** Python · Scikit-learn · Pandas · Time Series
+
+### Automated Plant Root Analysis — NPEC.nl
+End-to-end computer-vision & robotics pipeline automating root-system measurement — segmentation and morphological feature extraction integrated with robotic imaging hardware.
+**Tech:** Python · OpenCV · Image Segmentation · Robotics
+
+### TV Show Emotion Detection — Continental Intelligence
+Large-scale NLP/LLM system mapping emotional arcs, character sentiment, and engagement dynamics across TV-show transcripts.
+**Tech:** Python · LLMs · NLP · Transformers
+
+### Production LLM Deployment with Docker
+Production-grade LLM deployment using Docker and MLOps workflows — containerized, reproducible builds with monitoring, automated testing, and CI/CD.
+**Tech:** Docker · Python · MLOps · Model Serving · CI/CD
 
 ---
 
-## Connect with Me
+## 🎓 Education
 
-**LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/noah-ivanisevic-94386a315/)
+**BSc Applied Data Science & Artificial Intelligence** — Breda University of Applied Sciences (BUas)
+*2023 – Present · Breda, Netherlands · Expected graduation 2027*
 
-**Email:** [noitaivanisevic49@gmail.com](mailto:noitaivanisevic49@gmail.com)
+---
 
-**GitHub:** [github.com/NoahIvanisevic](https://github.com/NoahIvanisevic)
+## 📜 Certifications
+
+**Data Science & Machine Learning**
+- [Supervised Learning with Scikit-learn](https://app.datacamp.com/learn/courses/supervised-learning-with-scikit-learn) — DataCamp · [Certificate](certificates/Supervised_Learning_with_Scikit-learn.pdf)
+- [Machine Learning for Time Series Data in Python](https://app.datacamp.com/learn/courses/machine-learning-for-time-series-data-in-python) — DataCamp · [Certificate](certificates/Machine_Learning_for_Time_Series_Data_in_Python.pdf)
+- [Dimensionality Reduction in Python](https://app.datacamp.com/learn/courses/dimensionality-reduction-in-python) — DataCamp · [Certificate](certificates/Dimensionality_Reduction_in_Python.pdf)
+- [Understanding Machine Learning](https://app.datacamp.com/learn/courses/understanding-machine-learning) — DataCamp · [Certificate](certificates/Understanding_Machine_Learning.pdf)
+
+**Data Analysis & Visualization**
+- [Data Manipulation with Pandas](https://app.datacamp.com/learn/courses/data-manipulation-with-pandas) — DataCamp · [Certificate](certificates/DataManipulation_with_Pandas.pdf)
+- [Data Visualization in Power BI](https://app.datacamp.com/learn/courses/data-visualization-in-power-bi) — DataCamp · [Certificate](certificates/Data_Visualization_in_Power_BI.pdf)
+- [User-Oriented Design in Power BI](https://app.datacamp.com/learn/courses/user-oriented-design-in-power-bi-old-archived) — DataCamp · [Certificate](certificates/User-Oriented_Design_in_Power_BI.pdf)
+
+**Data Engineering & Cloud**
+- [Creating PostgreSQL Databases](https://app.datacamp.com/learn/courses/creating-postgresql-databases) — DataCamp · [Certificate](certificates/Creating_PostgreSQL_Databases.pdf)
+- [Understanding Cloud Computing](https://app.datacamp.com/learn/courses/understanding-cloud-computing) — DataCamp · [Certificate](certificates/Understanding_Cloud_Computing.pdf)
+
+**Professional Skills**
+- [Design Thinking: Understanding the Process](https://www.linkedin.com/learning/) — LinkedIn Learning · [Certificate](certificates/Design_Thinking_Understanding_the_Process.pdf)
+
+---
+
+## 🌍 Languages
+
+| Language | Level |
+|---|---|
+| Spanish | Native |
+| German | Native |
+| Catalan | Advanced |
+| English | Fluent |
+| Dutch | Basic |
+| French | Basic |
+
+---
+
+## 📫 Connect with Me
+
+- **Portfolio:** [noahivanisevic.github.io/NoahIvanisevic](https://noahivanisevic.github.io/NoahIvanisevic/)
+- **LinkedIn:** [Noah Ivanisevic](https://www.linkedin.com/in/noah-ivanisevic-94386a315/)
+- **Email:** [noitaivanisevic49@gmail.com](mailto:noitaivanisevic49@gmail.com)
+- **GitHub:** [github.com/NoahIvanisevic](https://github.com/NoahIvanisevic)
+
+---
+
+> Built with curiosity and far too much Monster Energy. ⚡
