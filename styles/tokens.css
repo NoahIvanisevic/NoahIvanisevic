@@ -1,0 +1,244 @@
+/* ============================================================
+   StekConnect — Colors & Type Tokens
+   Brand colors are sampled directly from the supplied
+   "Kleurenpalet StekConnect.png". The two brand families are
+   Sage Green (warmth, growth, "thuis voelen") and Slate Blue
+   (vertrouwen, professionaliteit, "connect").
+   ============================================================ */
+
+/* ---- Fonts (Google Fonts — see README font-substitution note) */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&family=Barlow+Condensed:wght@700;800;900&display=swap');
+
+:root {
+  /* ---------------- Brand palette (from logo) ---------------- */
+  --sage-50:  #F1F6F2;
+  --sage-100: #DCE9DE;
+  --sage-200: #ABC8B4;   /* Sage Light — palette swatch 1 */
+  --sage-400: #84A18E;   /* Sage — palette swatch 2 */
+  --sage-600: #5F7E69;
+  --sage-800: #3D5446;
+
+  --slate-50:  #F0F3F8;
+  --slate-100: #DCE2EC;
+  --slate-200: #B8C3D8;
+  --slate-300: #8FA1C2;  /* Slate Light — palette swatch 3 */
+  --slate-500: #647AA1;  /* Slate — palette swatch 4 — PRIMARY */
+  --slate-700: #455573;
+  --slate-900: #232A3A;
+
+  /* ---------------- Neutrals ---------------- */
+  --cream:     #FCF4F1;  /* Logo background tone */
+  --paper:     #FAF7F3;
+  --ink:       #1F2530;
+  --ink-soft:  #3E4655;
+  --ink-mute:  #6C7585;
+  --line:      #E8E2DA;
+  --line-soft: #F0EAE2;
+  --white:     #FFFFFF;
+
+  /* ---------------- Semantic tokens ---------------- */
+  --bg:           var(--cream);
+  --bg-elevated:  var(--white);
+  --bg-muted:     var(--paper);
+  --fg:           var(--ink);
+  --fg-soft:      var(--ink-soft);
+  --fg-mute:      var(--ink-mute);
+  --fg-on-dark:   var(--white);
+
+  --primary:        var(--slate-500);
+  --primary-hover:  var(--slate-700);
+  --primary-soft:   var(--slate-100);
+
+  --accent:         var(--sage-400);
+  --accent-hover:   var(--sage-600);
+  --accent-soft:    var(--sage-100);
+
+  --border:        var(--line);
+  --border-strong: var(--ink-mute);
+
+  /* Status — derived to feel native to the palette */
+  --success: #5C8B6C;
+  --success-soft: #E4EFE5;
+  --warning: #C7965C;
+  --warning-soft: #F6E9D4;
+  --danger:  #B4595A;
+  --danger-soft:  #F3DCDC;
+  --info:    var(--slate-500);
+  --info-soft: var(--slate-100);
+
+  /* ---------------- Type system ---------------- */
+  --font-display: 'Barlow Condensed', 'Anton', 'Arial Narrow', sans-serif;
+  --font-sans:    'Mulish', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    ui-monospace, SFMono-Regular, 'Menlo', monospace;
+
+  --fs-12: 12px;  --lh-12: 16px;
+  --fs-14: 14px;  --lh-14: 20px;
+  --fs-16: 16px;  --lh-16: 24px;
+  --fs-18: 18px;  --lh-18: 28px;
+  --fs-20: 20px;  --lh-20: 30px;
+  --fs-24: 24px;  --lh-24: 32px;
+  --fs-32: 32px;  --lh-32: 40px;
+  --fs-40: 40px;  --lh-40: 48px;
+  --fs-56: 56px;  --lh-56: 60px;
+  --fs-72: 72px;  --lh-72: 72px;
+
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-black:    900;
+
+  /* ---------------- Spacing (4px base) ---------------- */
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  20px;
+  --s-6:  24px;
+  --s-8:  32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+  --s-24: 96px;
+
+  /* ---------------- Radii ---------------- */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  /* ---------------- Elevation ---------------- */
+  --shadow-xs: 0 1px 2px rgba(35, 42, 58, 0.06);
+  --shadow-sm: 0 2px 6px rgba(35, 42, 58, 0.06), 0 1px 2px rgba(35, 42, 58, 0.04);
+  --shadow-md: 0 8px 20px rgba(35, 42, 58, 0.08), 0 2px 6px rgba(35, 42, 58, 0.04);
+  --shadow-lg: 0 18px 40px rgba(35, 42, 58, 0.10), 0 4px 10px rgba(35, 42, 58, 0.05);
+  --shadow-focus: 0 0 0 4px rgba(100, 122, 161, 0.25); /* slate-500 @ 25% */
+
+  /* ---------------- Motion ---------------- */
+  --ease-out:   cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:   140ms;
+  --dur-base:   220ms;
+  --dur-slow:   400ms;
+}
+
+/* ============================================================
+   Semantic type roles — apply as utility classes or compose
+   directly via @extend-style usage in components.
+   ============================================================ */
+html, body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-16);
+  line-height: var(--lh-16);
+  color: var(--fg);
+  background: var(--bg);
+  font-weight: var(--fw-regular);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.t-display-xl,
+h1.display {
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-72);
+  line-height: var(--lh-72);
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: var(--fg);
+}
+
+.t-display-lg {
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-56);
+  line-height: var(--lh-56);
+  letter-spacing: -0.005em;
+}
+
+h1, .t-h1 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-40);
+  line-height: var(--lh-40);
+  letter-spacing: -0.01em;
+  color: var(--fg);
+}
+
+h2, .t-h2 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-32);
+  line-height: var(--lh-32);
+  letter-spacing: -0.005em;
+  color: var(--fg);
+}
+
+h3, .t-h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-24);
+  line-height: var(--lh-24);
+  color: var(--fg);
+}
+
+h4, .t-h4 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-20);
+  line-height: var(--lh-20);
+  color: var(--fg);
+}
+
+.t-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-12);
+  line-height: var(--lh-12);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-hover);
+}
+
+p, .t-body {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-16);
+  line-height: var(--lh-18);
+  color: var(--fg-soft);
+}
+
+.t-body-lg {
+  font-size: var(--fs-18);
+  line-height: 28px;
+  color: var(--fg-soft);
+}
+
+.t-caption {
+  font-size: var(--fs-14);
+  line-height: var(--lh-14);
+  color: var(--fg-mute);
+}
+
+.t-meta {
+  font-size: var(--fs-12);
+  line-height: var(--lh-12);
+  color: var(--fg-mute);
+}
+
+code, kbd, .t-mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+a:hover { color: var(--primary-hover); }
